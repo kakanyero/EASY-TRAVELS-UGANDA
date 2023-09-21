@@ -3,10 +3,7 @@ package com.example.easytravels.loginandsignup
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
 import com.example.easytravels.MainActivity
-import com.example.easytravels.R
 import com.example.easytravels.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -24,9 +21,9 @@ class LoginActivity : AppCompatActivity() {
 
 
         binding.forgotPasswordTextField.setOnClickListener {
-            Intent(this,ForgotPasswordActivity::class.java).also {
-                startActivity(it)
-            }
+            val intent = Intent(this,ForgotPasswordActivity::class.java)
+            startActivity(intent)
+
         }
 
         binding.signUpTextField.setOnClickListener {
@@ -34,11 +31,6 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
-
-
-
-
-
 
     }
 }
