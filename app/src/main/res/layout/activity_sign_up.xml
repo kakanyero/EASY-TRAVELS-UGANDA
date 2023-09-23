@@ -14,14 +14,14 @@
         <!--Name-->
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout"
+            android:id="@+id/nametextInputLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
-            android:hint="Name"
+            android:hint="@string/name"
             app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -29,14 +29,14 @@
             app:startIconDrawable="@drawable/baseline_person_24">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textField"
+                android:id="@+id/nametextFieldId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout2"
+            android:id="@+id/addresstextInputLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -47,18 +47,18 @@
             app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/nametextInputLayout"
             app:startIconDrawable="@drawable/baseline_home_24">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textField2"
+                android:id="@+id/addresstextFieldId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
         <!--contact-->
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout3"
+            android:id="@+id/contacttextInputLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -69,13 +69,13 @@
             app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/addresstextInputLayout"
             app:prefixText="+256"
             app:prefixTextColor="@color/design_default_color_primary"
             app:startIconDrawable="@drawable/baseline_phone_24">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textField3"
+                android:id="@+id/contacttextFieldId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="phone" />
@@ -84,7 +84,7 @@
         <!--gender-->
         <com.google.android.material.textfield.TextInputLayout
 
-            android:id="@+id/textInputLayout4"
+            android:id="@+id/gendertextInputLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
             android:hint="Gender"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+            app:layout_constraintTop_toBottomOf="@+id/contacttextInputLayout"
             app:startIconDrawable="@drawable/baseline_person_24">
 
             <AutoCompleteTextView
@@ -108,7 +108,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlinedTextFieldForEmail"
+            android:id="@+id/logInEmailTextfield"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -120,10 +120,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/gendertextInputLayout"
             app:startIconDrawable="@drawable/baseline_email_24">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signUpEmailId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress" />
@@ -131,7 +132,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlinedTextFieldForPassword"
+            android:id="@+id/logInPasswordtextfield"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -143,10 +144,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldForEmail"
+            app:layout_constraintTop_toBottomOf="@+id/logInEmailTextfield"
             app:startIconDrawable="@drawable/baseline_lock_24">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signUPasswordId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword" />
@@ -154,7 +156,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlinedTextFieldForconfirmPassword"
+            android:id="@+id/signUpConfirmPasswordtextfield"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -166,10 +168,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldForPassword"
+            app:layout_constraintTop_toBottomOf="@+id/logInPasswordtextfield"
             app:startIconDrawable="@drawable/baseline_lock_24">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signUpConfirmPasswordId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword" />
@@ -177,7 +180,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/logInButton"
+            android:id="@+id/registerButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -187,7 +190,19 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldForconfirmPassword" />
+            app:layout_constraintTop_toBottomOf="@+id/signUpConfirmPasswordtextfield" />
+
+        <TextView
+            android:id="@+id/loginforalreadyregisterd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Already Registered , Log In"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registerButton" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
