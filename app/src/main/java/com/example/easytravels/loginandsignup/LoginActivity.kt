@@ -33,4 +33,8 @@ class LoginActivity : AppCompatActivity() {
         }
 
     }
+
+    fun loginSuccess(){
+
+    }
 }

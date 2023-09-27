@@ -18,4 +18,8 @@ class SignUpActivity : AppCompatActivity() {
         binding.genderId.setAdapter(adapter)
 
     }
+
+    fun signupSuccess(serSignupEmail:String, userSignupPassword:String) {
+        TODO("Not yet implemented")
+    }
 }
