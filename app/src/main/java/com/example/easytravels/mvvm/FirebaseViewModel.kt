@@ -5,6 +5,9 @@ import androidx.lifecycle.viewModelScope
 import com.example.easytravels.loginandsignup.ForgotPasswordActivity
 import com.example.easytravels.loginandsignup.LoginActivity
 import com.example.easytravels.loginandsignup.SignUpActivity
+import com.example.easytravels.models.Bus
+import com.example.easytravels.ui.activities.AddBus
+import com.example.easytravels.ui.busses.BussesFragment
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.launch
 
@@ -26,6 +29,18 @@ class FirebaseViewModel(private val repository: FirebaseViewModelRepository):Vie
     fun sendResetPasswordLink(activity: ForgotPasswordActivity, emailWhereToSendTheLink:String) {
         viewModelScope.launch {
             repository.sendResetPasswordLink(activity, emailWhereToSendTheLink)
+        }
+    }
+
+    fun storeBusDetailsToCloud(activity:AddBus, busToAdd: Bus){
+        viewModelScope.launch {
+            repository.storeBusDetailsToCloud(activity, busToAdd)
+        }
+    }
+
+    fun downloadBusDetailsFromCloud(fragment: BussesFragment){
+        viewModelScope.launch {
+            repository.downloadBusDetailsFromCloud(fragment)
         }
     }
 }

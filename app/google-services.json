@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "770871206671",
+    "project_id": "easytravels-ecf26",
+    "storage_bucket": "easytravels-ecf26.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770871206671:android:84ccbe0d738ce21804d47a",
+        "android_client_info": {
+          "package_name": "com.example.easytravels"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCA2_icjONHEE2pp_Esnoi4wXrsXuaZlmE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

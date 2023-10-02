@@ -30,8 +30,9 @@
     <fragment
         android:id="@+id/bussesFragment"
         android:name="com.example.easytravels.ui.busses.BussesFragment"
-        android:label="fragment_busses"
-        tools:layout="@layout/fragment_busses" />
+        android:label="Buses"
+        tools:layout="@layout/fragment_busses" >
+    </fragment>
     <fragment
         android:id="@+id/accountFragment"
         android:name="com.example.easytravels.ui.account.AccountFragment"

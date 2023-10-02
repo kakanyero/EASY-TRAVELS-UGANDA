@@ -13,6 +13,9 @@
         android:theme="@style/Theme.EASYTRAVELS"
         tools:targetApi="31">
         <activity
+            android:name=".ui.activities.AddBus"
+            android:exported="false" />
+        <activity
             android:name=".loginandsignup.ForgotPasswordActivity"
             android:exported="false" />
         <activity

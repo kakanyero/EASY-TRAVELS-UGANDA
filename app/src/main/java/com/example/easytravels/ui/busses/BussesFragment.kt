@@ -9,9 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.easytravels.adapters.BusesAdapter
-import com.example.easytravels.adapters.Firestore
 import com.example.easytravels.databinding.FragmentBussesBinding
 import com.example.easytravels.models.Bus
 import com.example.easytravels.mvvm.FireBaseViewModelFactory

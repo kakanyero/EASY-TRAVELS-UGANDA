@@ -15,4 +15,6 @@
     <string name="busses">Busses</string>
     <string name="account">Account</string>
     <string name="forgot_link">Link was sent, please check your inbox to reset your password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
