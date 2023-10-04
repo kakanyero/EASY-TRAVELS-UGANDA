@@ -6,6 +6,7 @@ import com.example.easytravels.loginandsignup.ForgotPasswordActivity
 import com.example.easytravels.loginandsignup.LoginActivity
 import com.example.easytravels.loginandsignup.SignUpActivity
 import com.example.easytravels.models.Bus
+import com.example.easytravels.models.User
 import com.example.easytravels.ui.activities.AddBus
 import com.example.easytravels.ui.busses.BussesFragment
 import com.google.firebase.auth.FirebaseAuth
@@ -23,6 +24,12 @@ class FirebaseViewModel(private val repository: FirebaseViewModelRepository):Vie
     fun userSignup(activity: SignUpActivity, userSignupEmail:String, userSignupPassword:String){
         viewModelScope.launch {
             repository.userSignUp(activity, userSignupEmail, userSignupPassword)
+        }
+    }
+
+    fun storeUserDataToCloud(activity: SignUpActivity, user: User){
+        viewModelScope.launch {
+            repository.storeUserDataToCloud(activity, user)
         }
     }
 

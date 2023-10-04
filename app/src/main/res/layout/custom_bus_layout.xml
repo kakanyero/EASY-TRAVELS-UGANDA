@@ -3,10 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content">-->
-
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -78,12 +74,21 @@
                         android:text="82"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_bus_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Available"
+                        android:padding="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/purple_200"/>
                 </LinearLayout>
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
-<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 </layout>

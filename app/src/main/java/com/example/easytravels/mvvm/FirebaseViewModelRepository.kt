@@ -7,6 +7,7 @@ import com.example.easytravels.loginandsignup.LoginActivity
 import com.example.easytravels.loginandsignup.SignUpActivity
 import com.example.easytravels.models.Bus
 import com.example.easytravels.models.Constants
+import com.example.easytravels.models.User
 import com.example.easytravels.ui.activities.AddBus
 import com.example.easytravels.ui.busses.BussesFragment
 import com.google.firebase.auth.FirebaseAuth
@@ -32,17 +33,29 @@ class FirebaseViewModelRepository {
 
     // Authentication | Signup
     fun userSignUp(activity: SignUpActivity, userSignupEmail:String, userSignupPassword:String){
-        mFirebaseAuth.signInWithEmailAndPassword(
+        mFirebaseAuth.createUserWithEmailAndPassword(
             userSignupEmail,
             userSignupPassword
-        ).addOnSuccessListener {
-                activity.signupSuccess(userSignupEmail, userSignupPassword)
+        ).addOnCompleteListener {
+            if (it.isSuccessful) {
+                val userId = mFirebaseAuth.currentUser!!.uid
+                activity.signupSuccess(userId)
             }
-            .addOnFailureListener {
-                Toast.makeText(
-                    activity, " Error while signing up the user",
-                    Toast.LENGTH_SHORT
-                ).show()
+        }
+        .addOnFailureListener {
+            Toast.makeText(
+                activity, " Error while signing up the user",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+    }
+
+    fun storeUserDataToCloud(activity: SignUpActivity, user: User){
+        mFirestore.collection(Constants.USERS_COLLECTION)
+            .document()
+            .set(user)
+            .addOnSuccessListener {
+                activity.storeUserDataToFirestoreSuccess()
             }
     }
 

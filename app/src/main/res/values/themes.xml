@@ -14,10 +14,22 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.EASYTRAVELS.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+
+    <style name="Theme.noActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#FF0000</item>
+        <item name="colorPrimaryVariant">@color/appColor</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/black</item>
+        <!-- Customize your theme here. -->
     </style>
+
+
 
     <style name="Theme.EASYTRAVELS.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

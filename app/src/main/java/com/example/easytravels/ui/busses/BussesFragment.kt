@@ -79,7 +79,7 @@ class BussesFragment : Fragment() {
     }
 
     private fun setUpRecyclerView(){
-        busesAdapter = BusesAdapter()
+        busesAdapter = BusesAdapter(requireActivity())
         binding.tvNoBusAvailable.visibility = View.GONE
 
         binding.recyclerViewBuses.apply {
