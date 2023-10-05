@@ -21,20 +21,20 @@ class Booking : BaseActivity(), View.OnClickListener {
          * First checking if the intent has the extra data including the bus number
          * for the specific bus to display
          */
-        if(intent.hasExtra(Constants.BUS_NUMBER_PLATE)){
-            // Storing the bus number plate in the mBusNumberPlate global variable
-            mBusNumberPlate = intent.getStringExtra(Constants.BUS_NUMBER_PLATE)!!
-
-            // Get the bus details data from intent and assign it to the views in this activity
-            val busDriver = intent.getStringExtra("bus_driver")
-            val busRoute = intent.getStringExtra("bus_route")
-            val numberOfSeats = intent.getStringExtra("number_of_seats")
-
-            binding.tvDetailsBusDriver.text = busDriver
-            binding.tvDetailsBusRoute .text = busRoute
-            binding.tvDetailsBusNo.text = mBusNumberPlate
-            binding.tvDetailsTotalSeat.text = numberOfSeats
-        }
+//        if(intent.hasExtra(Constants.BUS_NUMBER_PLATE)){
+//            // Storing the bus number plate in the mBusNumberPlate global variable
+//            mBusNumberPlate = intent.getStringExtra(Constants.BUS_NUMBER_PLATE)!!
+//
+//            // Get the bus details data from intent and assign it to the views in this activity
+//            val busDriver = intent.getStringExtra("bus_driver")
+//            val busRoute = intent.getStringExtra("bus_route")
+//            val numberOfSeats = intent.getStringExtra("number_of_seats")
+//
+//            binding.tvDetailsBusDriver.text = busDriver
+//            binding.tvDetailsBusRoute .text = busRoute
+//            binding.tvDetailsBusNo.text = mBusNumberPlate
+//            binding.tvDetailsTotalSeat.text = numberOfSeats
+//        }
 
     }
 
