@@ -10,17 +10,19 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.EASYTRAVELS"
+        android:theme="@style/noActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".AddBus"
+            android:name=".ui.activities.AddBus"
             android:exported="false" />
         <activity
             android:name=".loginandsignup.ForgotPasswordActivity"
+            android:theme="@style/noActionBar"
             android:exported="false" />
         <activity
             android:name=".loginandsignup.SignUpActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/noActionBar"/>
         <activity
             android:name=".loginandsignup.LoginActivity"
             android:exported="true">

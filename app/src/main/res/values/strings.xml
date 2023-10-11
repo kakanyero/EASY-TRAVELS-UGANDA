@@ -15,4 +15,6 @@
     <string name="busses">Busses</string>
     <string name="account">Account</string>
     <string name="name">Name</string>
+
+    <string name="forgot_link">Link was sent, please check your inbox to reset your password</string>
 </resources>
