@@ -57,7 +57,7 @@ class SignUpActivity : BaseActivity() {
 
         // Create account button
         binding.buttonRegister.setOnClickListener {
-            createUser()
+            createUserAccount()
         }
         // Already have an account layout, then login
         binding.llAlreadyHaveAccount.setOnClickListener {
@@ -138,7 +138,7 @@ class SignUpActivity : BaseActivity() {
     }
 
 
-    private fun createUser(){
+    private fun createUserAccount(){
 
         val email = binding.edRegEmail.text.toString()
         val password = binding.edRegPassword.text.toString()
@@ -150,16 +150,11 @@ class SignUpActivity : BaseActivity() {
                 binding.edRegConfirmPassword.text.toString()
             )
         ){
-            // start the progress dialog
-            progressDialog()
-
             firebaseViewModel.userSignup(this, email, password)
         }
     }
 
     fun signupSuccess(userId:String) {
-        // Hide progress dialog
-        hideProgressDialog()
 
         // After creating a user, then store other relevant info
         val name = binding.edRegName.text.toString()
@@ -172,6 +167,8 @@ class SignUpActivity : BaseActivity() {
     }
 
     fun storeUserDataToFirestoreSuccess() {
+        // Hide progress dialog
+        hideProgressDialog()
 
         Toast.makeText(this, "Your account has been created successfully", Toast.LENGTH_LONG).show()
         val intent = Intent(this, MainActivity::class.java)

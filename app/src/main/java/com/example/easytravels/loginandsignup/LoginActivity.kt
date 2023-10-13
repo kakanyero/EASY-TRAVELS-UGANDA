@@ -75,9 +75,7 @@ class LoginActivity : BaseActivity() {
 
     fun loginSuccess() {
         hideProgressDialog()
-
         val intent = Intent(this, MainActivity::class.java)
-
         // Getting rid of the other layers running in the background say if
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)

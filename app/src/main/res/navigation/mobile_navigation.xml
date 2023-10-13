@@ -12,29 +12,29 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.easytravels.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.easytravels.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-    <fragment
         android:id="@+id/routesFragment"
         android:name="com.example.easytravels.ui.routes.RoutesFragment"
-        android:label="fragment_routes"
+        android:label="ROUTES"
         tools:layout="@layout/fragment_routes" />
     <fragment
-        android:id="@+id/bussesFragment"
-        android:name="com.example.easytravels.ui.busses.BussesFragment"
-        android:label="fragment_busses"
-        tools:layout="@layout/fragment_busses" />
+        android:id="@+id/busesFragment"
+        android:name="com.example.easytravels.ui.buses.BusesFragment"
+        android:label="BUSES"
+        tools:layout="@layout/fragment_buses" />
     <fragment
         android:id="@+id/accountFragment"
         android:name="com.example.easytravels.ui.account.AccountFragment"
-        android:label="fragment_account"
+        android:label="ACCOUNT"
         tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/nav_share_app"
+        android:name="com.example.easytravels.Share"
+        android:label="fragment_share"
+        tools:layout="@layout/fragment_share" />
+    <fragment
+        android:id="@+id/nav_about_us"
+        android:name="com.example.easytravels.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+
 </navigation>

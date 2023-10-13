@@ -13,16 +13,21 @@
         android:theme="@style/noActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".ui.activities.AddBus"
-            android:exported="false" />
-        <activity
-            android:name=".loginandsignup.ForgotPasswordActivity"
+            android:name=".ui.activities.Booking"
             android:theme="@style/noActionBar"
             android:exported="false" />
         <activity
+            android:name=".ui.activities.AddBus"
+            android:theme="@style/noActionBar"
+            android:exported="false" />
+        <activity
+            android:name=".loginandsignup.ForgotPasswordActivity"
+            android:exported="false"
+            android:theme="@style/noActionBar" />
+        <activity
             android:name=".loginandsignup.SignUpActivity"
             android:exported="false"
-            android:theme="@style/noActionBar"/>
+            android:theme="@style/noActionBar" />
         <activity
             android:name=".loginandsignup.LoginActivity"
             android:exported="true">
@@ -34,9 +39,16 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.EASYTRAVELS.NoActionBar" />
+            android:theme="@style/Theme.EASYTRAVELS.NoActionBar"
+            android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--    -->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+
     </application>
 
 </manifest>

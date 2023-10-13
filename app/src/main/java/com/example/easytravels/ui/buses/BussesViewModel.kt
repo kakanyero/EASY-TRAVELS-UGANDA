@@ -1,4 +1,4 @@
-package com.example.easytravels.ui.busses
+package com.example.easytravels.ui.buses
 
 import androidx.lifecycle.ViewModel
 
