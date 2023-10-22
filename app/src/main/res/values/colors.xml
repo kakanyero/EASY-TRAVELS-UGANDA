@@ -11,6 +11,11 @@
     <color name="red">#FF0000</color>
     <color name="appColor">#FF0000</color>
     <color name="fragmentBg">#B8B8B8</color>
+    <color name="grey">#818181</color>
     <color name="deep_sky_blue">#1565C0</color>
     <color name="active_state_color">#FF03DAC5</color>
+
+    <!--    Snack bar colors-->
+    <color name="error_color">#FF0070</color>
+    <color name="success_color">#006A05</color>
 </resources>

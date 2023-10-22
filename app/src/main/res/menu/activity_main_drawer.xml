@@ -9,12 +9,27 @@
             android:icon="@drawable/baseline_home_24"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/accountFragment"
+            android:icon="@drawable/baseline_account_box_24"
+            android:title="Account" />
     </group>
+
+    <item android:title="more">
+        <menu>
+            <item
+                android:title="Share App"
+                android:icon="@drawable/baseline_share"
+                android:id="@+id/nav_share_app"/>
+
+            <item
+                android:title="About Us"
+                android:icon="@drawable/baseline_info"
+                android:id="@+id/nav_about_us"/>
+
+            <item
+                android:title="Logout"
+                android:icon="@drawable/ic_logout"
+                android:id="@+id/nav_logout"/>
+        </menu>
+    </item>
 </menu>

@@ -10,11 +10,10 @@
         android:icon="@drawable/baseline_route_24"/>
     <item
         android:title="@string/busses"
-        android:id="@+id/bussesFragment"
+        android:id="@+id/busesFragment"
         android:icon="@drawable/baseline_bus_24"/>
     <item
-            android:title="@string/account"
+        android:title="@string/account"
         android:id="@+id/accountFragment"
         android:icon="@drawable/baseline_account_box_24"/>
-
 </menu>

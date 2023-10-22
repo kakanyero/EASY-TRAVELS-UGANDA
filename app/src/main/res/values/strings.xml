@@ -12,9 +12,15 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="home">Home</string>
     <string name="routes">Routes</string>
-    <string name="busses">Busses</string>
+    <string name="busses">Buses</string>
     <string name="account">Account</string>
     <string name="name">Name</string>
 
+    <!--    Alert dialog strings-->
+    <string name="yes">Yes</string>
+    <string name="No">Cancel</string>
+
     <string name="forgot_link">Link was sent, please check your inbox to reset your password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
