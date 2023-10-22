@@ -1,13 +1,17 @@
 package com.example.easytravels.mvvm
 
+import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.easytravels.loginandsignup.ForgotPasswordActivity
 import com.example.easytravels.loginandsignup.LoginActivity
 import com.example.easytravels.loginandsignup.SignUpActivity
+import com.example.easytravels.models.BookingClass
 import com.example.easytravels.models.Bus
 import com.example.easytravels.models.User
 import com.example.easytravels.ui.activities.AddBus
+import com.example.easytravels.ui.activities.Booking
+import com.example.easytravels.ui.activities.BusDetails
 import com.example.easytravels.ui.buses.BusesFragment
 import kotlinx.coroutines.launch
 
@@ -54,5 +58,41 @@ class FirebaseViewModel(private val repository: FirebaseViewModelRepository): Vi
         }
     }
 
+    fun getExtraBusDetailsFromCloud(activity: BusDetails, bus_id:String){
+        viewModelScope.launch {
+            repository.getExtraBusDetailsFromCloud(activity, bus_id)
+        }
+    }
 
+    fun makeBooking(activity:BusDetails, book: BookingClass){
+        viewModelScope.launch {
+            repository.makeBooking(activity, book)
+        }
+    }
+
+    // Getting bookings
+    fun getBookingsFromCloud(activity:Booking){
+        viewModelScope.launch {
+            repository.getBookingsFromCloud(activity)
+        }
+    }
+
+    fun deleteBookingFromCloud(activity: Booking, bookingId:String){
+        viewModelScope.launch {
+            repository.deleteBookingFromCloud(activity, bookingId)
+        }
+    }
+
+    fun updateBooking(context: Booking, booking_id:String, itemHashMap:HashMap<String, Any>){
+        viewModelScope.launch {
+            repository.updateBooking(context, booking_id, itemHashMap)
+        }
+    }
+
+    // Getting the bus route
+//    fun getBusRoute(activity: BusDetails, route:String){
+//        viewModelScope.launch {
+//            repository.getBusRoute(activity, route)
+//        }
+//    }
 }

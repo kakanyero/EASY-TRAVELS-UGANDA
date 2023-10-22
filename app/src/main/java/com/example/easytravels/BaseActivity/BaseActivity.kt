@@ -6,10 +6,12 @@ import android.content.Context
 import android.content.Intent
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import com.example.easytravels.R
 import com.example.easytravels.databinding.CustomProgressDialogBinding
 import com.example.easytravels.loginandsignup.LoginActivity
+import com.google.android.material.snackbar.Snackbar
 
 open class BaseActivity : AppCompatActivity() {
 
@@ -70,5 +72,30 @@ open class BaseActivity : AppCompatActivity() {
         val alertDialog: AlertDialog = alertDialogBuilder.create()
         alertDialog.setCancelable(false)
         alertDialog.show()
+    }
+
+
+    fun showErrorSnackBar(message: String, errorMessage: Boolean){
+        val snackBar = Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_LONG)
+        val snackBarView = snackBar.view
+
+        //Setting the background if there is an error
+        if (errorMessage){
+            snackBarView.setBackgroundColor(
+                ContextCompat.getColor(
+                    this, R.color.error_color
+                )
+            )
+        }
+
+        //Setting the background color if there is no error massage
+        else{
+            snackBarView.setBackgroundColor(
+                ContextCompat.getColor(
+                    this, R.color.success_color
+                )
+            )
+        }
+        snackBar.show()
     }
 }

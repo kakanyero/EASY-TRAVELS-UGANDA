@@ -125,6 +125,27 @@
                         android:textColor="@color/deep_sky_blue"
                         android:textSize="25sp" />
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_marginEnd="10dp"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:text="Bus Id:"/>
+
+                    <TextView
+                        android:id="@+id/tv_bus_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="xxxxxxxxx"
+                        android:textStyle="bold"
+                        android:textColor="@color/deep_sky_blue"
+                        android:textSize="17sp" />
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/tv_bus_status"

@@ -17,6 +17,7 @@ import androidx.navigation.ui.NavigationUI
 import com.example.easytravels.BaseActivity.BaseActivity
 import com.example.easytravels.databinding.ActivityMainBinding
 import com.example.easytravels.loginandsignup.LoginActivity
+import com.example.easytravels.ui.activities.Booking
 
 class MainActivity : BaseActivity() {
 
@@ -63,6 +64,10 @@ class MainActivity : BaseActivity() {
             R.id.action_logout ->{
                 showAlertDialogForLogout(this, "Logout", "Are you sure to logout")
                 return true
+            }
+
+            R.id.action_bookings ->{
+                startActivity(Intent(this, Booking::class.java))
             }
         }
 
